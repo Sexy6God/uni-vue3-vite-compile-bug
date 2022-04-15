@@ -1,0 +1,30 @@
+<template>
+  <view class="main">
+    <view class="counter" @click="counterStore.increment">
+      <text>{{ counterStore.count }}</text>
+    </view>
+    <!-- <view class="counter">TEST</view> -->
+  </view>
+</template>
+
+<script setup lang="ts">
+  import { useCounterStore } from '@/store/counter';
+  const counterStore = useCounterStore();
+  console.log('test pinia');
+</script>
+
+<style>
+  .main {
+    padding: 20rpx;
+  }
+
+  .counter {
+    margin: 50rpx 0;
+    height: 80rpx;
+    font-size: 30rpx;
+    line-height: 80rpx;
+    text-align: center;
+    background: #f8f7fa;
+    border-radius: 8rpx;
+  }
+</style>
